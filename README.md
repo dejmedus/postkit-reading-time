@@ -2,6 +2,8 @@
 
 Estimate how long a post takes to read based on word count
 
+🤔 It would be good to declare what you consider a word up front. "Words are sequences separated by whitespace, and include punctuation" or soemthing like that. This will help other devs understand what is happening, and inform your decision making. 
+
 #### Installation
 
 ```bash
@@ -55,6 +57,8 @@ console.log(formatTime(time)); // "Less than a minute"
 - Negative numbers or 0: formats to "Less than a minute"
 
 #### Design Notes
+
+🤔 Might be good to spell this out for devs: Calculated as wordCount(str) / 250
 
 - A reading speed of 250 words per minute is used to calculate reading time
 - Reading time is returned as is, rather than rounding in case someone want to use it for something other than display (like sorting posts by reading time)
