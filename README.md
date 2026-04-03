@@ -1,6 +1,6 @@
 ### [ACS 3310] Postkit: Reading Time
 
-Estimate how long a post takes to read based on word count
+Estimate how long a post takes to read based on word count. Words are character sequences separated by whitespace, and include punctuation
 
 #### Installation
 
@@ -56,6 +56,6 @@ console.log(formatTime(time)); // "Less than a minute"
 
 #### Design Notes
 
-- A reading speed of 250 words per minute is used to calculate reading time
+- A reading speed of 250 words per minute is used to calculate reading time. Calculated as total word count divided by WPM equals reading time in minutes
 - Reading time is returned as is, rather than rounding in case someone want to use it for something other than display (like sorting posts by reading time)
 - `0 words` and `Less than a minute` will be treated as the "floor". This way, unrealistic input (like empty text or negative numbers) can be handled gracefully rather than erroring
