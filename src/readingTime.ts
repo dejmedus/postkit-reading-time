@@ -1,3 +1,5 @@
+import { wordCount } from ".";
+
 /**
  * Estimate the reading time of the given text
  *
@@ -5,5 +7,6 @@
  * @returns number of minutes
  */
 export function readingTime(str: string): number {
-  return 1;
+  const count = wordCount(str);
+  return count / 250;
 }
