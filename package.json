@@ -1,0 +1,43 @@
+{
+  "name": "postkit-reading-time",
+  "version": "1.0.0",
+  "description": "Estimate how long a post takes to read",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --watch --format esm,cjs --dts",
+    "clean": "rm -rf dist",
+    "test:watch": "vitest",
+    "package": "npm run build && rm -rf *.tgz && npm pack && tar -tf *.tgz",
+    "setup": "bash ./setup-test-env.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dejmedus/postkit-reading-time.git"
+  },
+  "keywords": [],
+  "author": "dejmedus",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dejmedus/postkit-reading-time/issues"
+  },
+  "homepage": "https://github.com/dejmedus/postkit-reading-time#readme",
+  "private": "true",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

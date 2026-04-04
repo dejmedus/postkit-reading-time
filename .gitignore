@@ -1,0 +1,6 @@
+node_modules
+dist
+notes.md
+terminal.config.json
+*.tgz
+test-env/
