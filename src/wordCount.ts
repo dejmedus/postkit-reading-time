@@ -5,5 +5,5 @@
  * @returns number of words
  */
 export function wordCount(str: string): number {
-  return 1;
+  return str.match(/\S+/g)?.length ?? 0;
 }

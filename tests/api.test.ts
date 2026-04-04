@@ -6,6 +6,7 @@ describe("wordCount", () => {
     expect(wordCount("Hi")).toBe(1);
     expect(wordCount("A fish jumped over something super tall. Wow!")).toBe(8);
     expect(wordCount("this.... h@s, lots of punctu^tion!")).toBe(5);
+    expect(wordCount("a\nparagraph")).toBe(2);
   });
 
   test("returns 0 for empty strings", () => {
@@ -13,7 +14,7 @@ describe("wordCount", () => {
   });
 
   test("handles whitespace between words", () => {
-    expect(wordCount("one   two   three")).toBe(3);
+    expect(wordCount("  one   two   three")).toBe(3);
   });
 });
 
